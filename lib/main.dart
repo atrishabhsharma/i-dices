@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         '/Dual': (context) => DicePage2(),
       },
       debugShowCheckedModeBanner: false,
-      title: 'I-DICES',
+      title: 'Dicey',
     );
   }
 }

@@ -21,7 +21,12 @@ class _DicePage2State extends State<DicePage2> {
             }),
         backgroundColor: Color(0xff184d47),
         title: Center(
-          child: Text('Dual Dice'),
+          child: Text('Dual Dice',
+              style: TextStyle(
+                letterSpacing: 5,
+                fontFamily: 'Pacifico',
+                fontSize: 30,
+              )),
         ),
         titleSpacing: 20,
       ),
@@ -33,7 +38,7 @@ class _DicePage2State extends State<DicePage2> {
                 child: Image.asset('images/dice$leftDice.png'),
                 onPressed: () {
                   setState(() {
-                    leftDice = Random().nextInt(6) + 1;
+                    changeMe();
                   });
                 },
               ),
@@ -43,7 +48,7 @@ class _DicePage2State extends State<DicePage2> {
                 child: Image.asset('images/dice$rightDice.png'),
                 onPressed: () {
                   setState(() {
-                    rightDice = Random().nextInt(6) + 1;
+                    changeMe();
                   });
                 },
               ),
@@ -52,5 +57,10 @@ class _DicePage2State extends State<DicePage2> {
         ),
       ),
     );
+  }
+
+  void changeMe() {
+    leftDice = Random().nextInt(6) + 1;
+    rightDice = Random().nextInt(6) + 1;
   }
 }

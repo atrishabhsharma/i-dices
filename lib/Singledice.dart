@@ -19,7 +19,13 @@ class _DicePage1State extends State<DicePage1> {
               Navigator.pop(context);
             }),
         backgroundColor: Color(0xff184d47),
-        title: Center(child: Text('Single Dice')),
+        title: Center(
+            child: Text('Single Dice',
+                style: TextStyle(
+                  letterSpacing: 5,
+                  fontFamily: 'Pacifico',
+                  fontSize: 30,
+                ))),
         titleSpacing: 20,
       ),
       body: Center(
